@@ -55,7 +55,7 @@ total_invalid_moves_3=0
 
 total_moves_4 = 0
 total_invalid_moves_4=0
-optimal_zeroshot_steps = []
+optimal_steps = []
 for file in os.listdir(args.output_dir):
     if "optimal_steps_2" in file:
         target_room = int(file.split("_")[1])
@@ -97,7 +97,7 @@ for file in os.listdir(args.output_dir):
             total_reward+=10
             
             solved_without_invalid = 1
-            optimal_zeroshot_steps.append((2,num_moves))
+            optimal_steps.append((2,num_moves))
         all_rewards_step2.append(total_reward)
         all_frac_invalid_moves_step2.append(num_invalid_moves/num_moves)
         all_solved_step2.append(solved_without_invalid)
@@ -150,7 +150,7 @@ for file in os.listdir(args.output_dir):
             total_reward+=10
             
             solved_without_invalid = 1
-            optimal_zeroshot_steps.append((3,num_moves))
+            optimal_steps.append((3,num_moves))
         all_rewards_step3.append(total_reward)
         all_frac_invalid_moves_step3.append(num_invalid_moves/num_moves)
         all_solved_step3.append(solved_without_invalid)
@@ -202,7 +202,7 @@ for file in os.listdir(args.output_dir):
             total_reward+=10
             
             solved_without_invalid = 1
-            optimal_zeroshot_steps.append((4,num_moves))
+            optimal_steps.append((4,num_moves))
         all_rewards_step4.append(total_reward)
         all_frac_invalid_moves_step4.append(num_invalid_moves/num_moves)
         all_solved_step4.append(solved_without_invalid)
