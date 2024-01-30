@@ -24,7 +24,10 @@ parser.add_argument
 parser.add_argument('--openai_api_key', type = str, help='openai key', required= True)
 parser.add_argument('--output_dir',type=str, help='directory name where output log files will be stored', required= True)
 
+args = parser.parse_args()
+print(args)
 
+openai.api_key = args.openai_api_key
 
 def move_validator_module(current_state,action):
 
