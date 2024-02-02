@@ -34,6 +34,7 @@ For example to run and evaluate LLM-PFC on the Valuepath task first execute, `py
 
 Then execute, `python gpt4_llmpfc_valuepath_eval.py --output_dir '<OUTPUT DIRECTORY NAME>'`
 
+
 To run and evaluate one of the baseline models, for example, GPT-4 ICL on the Valuepath task first execute, `python gpt4_standard_icl_valuepath.py --openai_api_key '<YOUR OPENAI KEY>' --output_dir '<OUTPUT DIRECTORY NAME>'`
 
 Then execute, `python gpt4_valuepath_baselines_eval.py --output_dir '<OUTPUT DIRECTORY NAME>'`
@@ -50,16 +51,15 @@ To run the above models you need to specify two required arguments- 1) openAI AP
 
 For example to run LLM-PFC first execute, `python gpt4_llmpfc_plan_generation.py --openai_api_key '<YOUR OPENAI KEY>' --output_dir '<OUTPUT DIRECTORY NAME>'`
 
-
 Then to generate the plan response JSON execute, `python gpt4_llmpfc_genplan_response_json.py --output_dir '<OUTPUT DIRECTORY NAME>'`
 
-Finally, to evaluate the plan response JSON, execute `python LLMs-Planning/plan-bench/response_evaluation.py --task 't1' --config 'logistics' --engine 'llmpfc' --ignore_existing --verbose 'True'`
+Finally, to evaluate the plan response JSON execute, `python LLMs-Planning/plan-bench/response_evaluation.py --task 't1' --config 'logistics' --engine 'llmpfc' --ignore_existing --verbose 'True'`
 
 
 To run one of the baseline models, for example, GPT-4 ICL first execute, `python gpt4_icl_plan_generation.py --openai_api_key '<YOUR OPENAI KEY>' --output_dir '<OUTPUT DIRECTORY NAME>'`
 
 Then to generate the plan response JSON execute, `python gpt4_baselines_genplan_response_json.py --output_dir '<OUTPUT DIRECTORY NAME>' --model 'gpt4_icl'`
 
-Finally, to evaluate the plan response JSON, execute `python LLMs-Planning/plan-bench/response_evaluation.py --task 't1' --config 'logistics' --engine 'gpt4_icl' --ignore_existing --verbose 'True'`
+Finally, to evaluate the plan response JSON execute, `python LLMs-Planning/plan-bench/response_evaluation.py --task 't1' --config 'logistics' --engine 'gpt4_icl' --ignore_existing --verbose 'True'`
 
 
