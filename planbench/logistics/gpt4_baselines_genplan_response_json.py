@@ -37,10 +37,11 @@ for instance in tqdm(data["instances"]):
         
         gpt_plan = ""
         for j in range(answer_index+1,gt_index):
-
-            gpt_plan+=lines_baseline[j]+"\n"
+            if len(lines_baseline[j])>0 and "[START]" in lines_baseline[j] and "[END]" in lines_baseline[j]:
+                gpt_plan += lines_baseline[j].split("[START]")[1].split("[END]")[0].replace(".","").strip()+"\n"
+                
         
-        instance["llm_raw_response"] = gpt_plan
+        instance["llm_raw_response"] = gpt_plan + "[PLAN END]\n"
         output_dir = 'LLMs-Planning/plan-bench/responses/logistics/'+ args.model + '/'
         check_path(output_dir)
         with open(output_dir+'task_1_plan_generation.json', 'w') as file:
