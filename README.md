@@ -5,7 +5,7 @@
 - numpy==1.24.3
 - tqdm==4.65.0
 - json==2.0.9
-- openai==0.27.7
+- openai==1.24.1
 
 ## Tower of Hanoi (ToH)
 
