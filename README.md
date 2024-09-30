@@ -1,4 +1,4 @@
-# This repository contains code for the paper titled "Improving Planning with Large Language Models: A Brain-inspired Agentic Architecture"
+# This repository contains code for the paper titled "Improving Planning With Large Language Models: A Modular Agentic Architecture"
 
 ## Requirements
 - python 3.9.17
