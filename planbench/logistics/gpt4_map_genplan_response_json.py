@@ -41,7 +41,7 @@ for instance in tqdm(data["instances"]):
             gpt_plan+=lines_baseline[answer_index+j]+"\n"
         gpt_plan+="[PLAN END]"
         instance["llm_raw_response"] = gpt_plan
-        output_dir = 'LLMs-Planning/plan-bench/responses/logistics/llmpfc/'
+        output_dir = 'LLMs-Planning/plan-bench/responses/logistics/map/'
         check_path(output_dir)
 
         with open(output_dir+'task_1_plan_generation.json', 'w') as file:
