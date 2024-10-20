@@ -43,11 +43,11 @@ Then execute, `python gpt4_valuepath_baselines_eval.py --output_dir '<OUTPUT DIR
 
 ## Planbench
 
-For the mystery blocksworld task, the codebase (inside `planbench/mystery_blocksworld` directory) contains files to run MAP and GPT-4 baselines such as zero-shot, in-context learning (ICL), chain-of-thought (CoT) with ICL, and multi-agent debate (MAD). It also contains files to generate plan responses JSON for further evaluation.  
+For the mystery blocksworld task, the codebase (inside `planbench/mystery_blocksworld` directory) contains files to run MAP and GPT-4 baselines such as zero-shot, in-context learning (ICL), chain-of-thought (CoT) with ICL, and multi-agent debate (MAD), and tree of thought (ToT). It also contains files to generate plan responses JSON for further evaluation.  
 
 First clone the LLMs-Planning repo, inside `planbench/mystery_blocksworld` directory from https://github.com/karthikv792/LLMs-Planning, and the follow the instructions given in https://github.com/karthikv792/LLMs-Planning/tree/main/plan-bench for setup.
 
-To run the above models you need to insert the following block of code at the start of the script after the import statements. Fill in the `api_key`, `azure_endpoint`, and `deployment_name`. Also as a required argument specify the directory name where output log files will be stored
+To run the above models you need to insert the following block of code at the start of the script after the import statements (for ToT insert in `models.py`). Fill in the `api_key`, `azure_endpoint`, and `deployment_name`. Also as a required argument specify the directory name where output log files will be stored
 ```
 client = AzureOpenAI(
 	api_key="",
@@ -82,4 +82,5 @@ client = AzureOpenAI(
 deployment_name = ''
 ```
 For example to run MAP execute, `python map_strategyqa.py`
+
 
